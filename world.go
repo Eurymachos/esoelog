@@ -246,14 +246,14 @@ func (g *gameState) doEndCast(when time.Duration, line []string) {
 }
 
 func (g *gameState) getUnits(line []string) (src, dst *UnitState) {
-	src = parseUnitState(line[:10])
+	src = NewUnitState(line[:10])
 	if src != nil {
 		BindUnit(g.units[src.unitID], src)
 		g.unitStates[src.unitID] = src
 	}
 	dst = src
 	if line[10] != "*" {
-		dst = parseUnitState(line[10:20])
+		dst = NewUnitState(line[10:20])
 		if dst != nil {
 			BindUnit(g.units[dst.unitID], dst)
 			g.unitStates[dst.unitID] = dst

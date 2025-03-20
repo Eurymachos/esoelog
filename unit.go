@@ -114,7 +114,7 @@ type UnitState struct {
 // UnitState refers to the following fields for a unit: unitId,
 // health/max, magicka/max, stamina/max, ultimate/max, werewolf/max,
 // shield, map NX, map NY, headingRadians
-func parseUnitState(line []string) *UnitState {
+func NewUnitState(line []string) *UnitState {
 	u := new(UnitState)
 	u.unitID, _ = strconv.Atoi(line[0])
 	if u.unitID == 0 {
@@ -138,4 +138,16 @@ func (u *UnitState) String() string {
 
 func (u *UnitState) ID() int {
 	return u.unitID
+}
+
+func (u *UnitState) X() float64 {
+	return u.mapNX
+}
+
+func (u *UnitState) Y() float64 {
+	return u.mapNY
+}
+
+func (u *UnitState) D() float64 {
+	return u.heading
 }

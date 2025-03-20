@@ -65,7 +65,7 @@ func MonsterMash(c <-chan *LogLine) {
 }
 
 func checkUnitState(monsters map[int]*UnitInfo, data []string) {
-	us := parseUnitState(data)
+	us := NewUnitState(data)
 
 	if ui, found := monsters[us.unitID]; found {
 		// We only need to see the max health once
