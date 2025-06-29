@@ -88,12 +88,12 @@ func RunGame(c <-chan *LogLine, m chan<- GameEvent) {
 
 func (g *gameState) Time(when time.Duration) string {
 	now := g.logStart.Add(when)
-	combatTime := now.Sub(g.combatStart)
+	/*combatTime := now.Sub(g.combatStart)
 	if combatTime.Minutes() < 30 {
 		return combatTime.String()
-	}
+	}*/
 
-	return now.Format(time.TimeOnly)
+	return now.Format(time.StampMilli)
 }
 
 // BEGIN_LOG, timeSinceEpocsMS, logVersion, realmName, language, gameVersion

@@ -9,7 +9,7 @@ func ZoneFilter(zone string, in <-chan *LogLine, out chan<- *LogLine) {
 		if l.LineType == ZoneChanged {
 			inZone = l.LineData[3] == zone
 		}
-		if inZone || l.LineType == AbilityInfo {
+		if inZone || l.LineType == AbilityInfo || l.LineType == BeginLog {
 			out <- l
 		}
 	}

@@ -47,3 +47,14 @@ __TRIAL_INIT__ - id, inProgress, completed, startTimeMS, durationMS, success, fi
 __BEGIN_TRIAL__ - id, startTimeMS
 
 __END_TRIAL__ - id, durationMS, success, finalScore, finalVitalityBonus
+
+Undocumented Lines
+------------------
+
+The following appear in Infinite Archive encounters.
+- ENDLESS_DUNGEON_BEGIN
+- ENDLESS_DUNGEON_BUFF_ADDED
+- ENDLESS_DUNGEON_BUFF_REMOVED
+- ENDLESS_DUNGEON_END
+- ENDLESS_DUNGEON_INIT
+- ENDLESS_DUNGEON_STAGE_END

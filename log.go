@@ -36,6 +36,13 @@ const (
 	TrialInit
 	BeginTrial
 	EndTrial
+	EndlessDungeonBegin
+	EndlessDungeonBuffAdded
+	EndlessDungeonBuffRemoved
+	EndlessDungeonEnd
+	EndlessDungeonInit
+	EndlessDungeonStageEnd
+
 	lastLineType           = iota - 1
 	firstLineType LineType = 0
 )

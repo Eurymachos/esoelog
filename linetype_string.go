@@ -28,12 +28,18 @@ func _() {
 	_ = x[TrialInit-17]
 	_ = x[BeginTrial-18]
 	_ = x[EndTrial-19]
+	_ = x[EndlessDungeonBegin-20]
+	_ = x[EndlessDungeonBuffAdded-21]
+	_ = x[EndlessDungeonBuffRemoved-22]
+	_ = x[EndlessDungeonEnd-23]
+	_ = x[EndlessDungeonInit-24]
+	_ = x[EndlessDungeonStageEnd-25]
 	_ = x[firstLineType-0]
 }
 
-const _LineType_name = "BeginLogEndLogBeginCombatEndCombatPlayerInfoBeginCastEndCastCombatEventHealthRegenUnitAddedUnitChangedUnitRemovedEffectChangedAbilityInfoEffectInfoMapChangedZoneChangedTrialInitBeginTrialEndTrial"
+const _LineType_name = "BeginLogEndLogBeginCombatEndCombatPlayerInfoBeginCastEndCastCombatEventHealthRegenUnitAddedUnitChangedUnitRemovedEffectChangedAbilityInfoEffectInfoMapChangedZoneChangedTrialInitBeginTrialEndTrialEndlessDungeonBeginEndlessDungeonBuffAddedEndlessDungeonBuffRemovedEndlessDungeonEndEndlessDungeonInitEndlessDungeonStageEnd"
 
-var _LineType_index = [...]uint8{0, 8, 14, 25, 34, 44, 53, 60, 71, 82, 91, 102, 113, 126, 137, 147, 157, 168, 177, 187, 195}
+var _LineType_index = [...]uint16{0, 8, 14, 25, 34, 44, 53, 60, 71, 82, 91, 102, 113, 126, 137, 147, 157, 168, 177, 187, 195, 214, 237, 262, 279, 297, 319}
 
 func (i LineType) String() string {
 	if i < 0 || i >= LineType(len(_LineType_index)-1) {
